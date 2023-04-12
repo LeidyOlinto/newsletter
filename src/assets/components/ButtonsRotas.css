@@ -1,0 +1,48 @@
+.buttonsBuscas{
+  justify-content: center;
+  height: 200px;
+  display: flex;
+  padding-top: 20px;
+  background: linear-gradient(184deg, rgba(61, 56, 55, 0.698) 60%, rgba(244, 244, 248, 0.104)  60.2%);
+
+}
+.buttons {
+  cursor: pointer;
+  align-items: center;
+  width: 160px;
+  height: 40px;
+  margin: 10px;
+  background: #FFFFFF 0% 0% no-repeat padding-box;
+  box-shadow: 0px 1px 6px #00000029;
+  color: #888888;
+  border: 1px solid #707070;
+  border-radius: 4px;
+  opacity: 1;
+}
+@media (max-width: 1000px){}
+@media (max-width: 900px){
+  .buttonsBuscas{
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    padding: 0px 0px 0px 0px;
+   
+  }
+}
+@media (max-width: 700px){}
+@media (max-width: 500px){
+  .buttonsBuscas{
+    height: 150px;
+    background: linear-gradient(
+    191deg, rgba(61, 56, 55, 0.698)
+     60%, rgba(244, 244, 248, 0.104) 60.2%);
+  }
+}
+@media (max-width: 400px){
+  .buttonsBuscas{
+    height: 150px;
+    background: linear-gradient(
+    194deg, rgba(61, 56, 55, 0.698)
+     60%, rgba(244, 244, 248, 0.104) 60.2%);
+  }
+}

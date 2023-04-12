@@ -1,0 +1,22 @@
+/* FOOTER */
+.footer{
+  text-align: center;
+  height: 293px;
+  background: linear-gradient(357deg, rgba(65, 62, 62, 0.7) 60%, rgba(244, 244, 248, 0.104) 60.2%);
+  opacity: 1;
+ 
+}
+.footerText{
+  padding-top: 125px;
+  text-align: center;
+  justify-content: center;
+  font: normal normal normal 12px/18px Helvetica Neue;
+  letter-spacing: 0px;
+  color: #FFFFFF;
+  opacity: 1;
+}
+@media (max-width: 1000px){}
+@media (max-width: 900px){}
+@media (max-width: 700px){}
+@media (max-width: 500px){}
+@media (max-width: 400px){}
