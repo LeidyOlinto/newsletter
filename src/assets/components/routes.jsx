@@ -1,7 +1,7 @@
-// import Home from '../views/Home/home.jsx';
-// import Selection from '../views/sectionSpecial/selection.jsx'
-// import {Routes, Route}from 'react-router-dom'
-// import React from 'react';
+import Home from '../views/Home/home.jsx';
+import Selection from '../views/sectionSpecial/selection.jsx'
+//import {Routes, Route}from 'react-router-dom'
+import React from 'react';
 
 // function App() {
 //   return (
@@ -15,3 +15,18 @@
 //   );
 // }
 // export default App;
+export const router = createBrowserRouter([
+ 
+  {
+    path: "/",
+    element:< Home  />,
+    children:[
+      {
+        path:'/',
+        element:<Selection  />
+      },
+     
+
+    ]
+  }
+])
