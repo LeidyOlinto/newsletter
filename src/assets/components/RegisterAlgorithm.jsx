@@ -1,6 +1,8 @@
+import { useState } from "react";
 import "./RegisterAlgorithm.css";
 
 function Register() {
+ 
   return (
     <main className="textSearch">
       <div className="textAlgorithm">

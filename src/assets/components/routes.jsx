@@ -15,18 +15,18 @@ import React from 'react';
 //   );
 // }
 // export default App;
-export const router = createBrowserRouter([
+// export const router = createBrowserRouter([
  
-  {
-    path: "/",
-    element:< Home  />,
-    children:[
-      {
-        path:'/',
-        element:<Selection  />
-      },
+//   {
+//     path: "/",
+//     element:< Home  />,
+//     children:[
+//       {
+//         path:'/',
+//         element:<Selection  />
+//       },
      
 
-    ]
-  }
-])
+//     ]
+//   }
+// ])

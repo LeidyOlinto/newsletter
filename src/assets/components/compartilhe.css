@@ -1,0 +1,61 @@
+/* EMVIE PARA SEU AMIGO */
+
+.friendText {
+  padding: 7px 0px 17px 0px;
+  justify-content: center;
+  text-align: center;
+  font: normal normal normal 14px/16px Helvetica Neue;
+  letter-spacing: 0px;
+  color: #888888;
+  opacity: 1;
+}
+.userInformation {
+  display: flex;
+  justify-content: space-evenly;
+}
+.userInformationBox {
+  width: 100%;
+  padding: 12px 20px;
+  margin: 8px 0;
+  display: inline-block;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+}
+.userInformationText {
+  text-align: left;
+  font: normal normal normal 12px/14px Helvetica Neue;
+  letter-spacing: 0px;
+  color: #888888;
+  opacity: 1;
+}
+.userInformationButton {
+  width: 260px;
+  height: 39px;
+  opacity: 1;
+  background-color: #707070;
+  color: white;
+  margin: 8px 0;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+.userButton {
+  display: flex;
+  justify-content: center;
+  padding: 10px 0px 40px 0px;
+}
+@media (max-width: 900px) {
+  .userInformation {
+    display: block;
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+}
+@media (max-width: 500px) {
+  .userInformation {
+    display: block;
+    padding-left: 10px;
+    padding-right: 10px;
+  }
+}

@@ -6,6 +6,7 @@ import ButtonsRotas from "./assets/components/ButtonsRotas.jsx";
 import Register from "./assets/components/RegisterAlgorithm.jsx";
 import Division from "./assets/components/Division.jsx";
 import Cards from "./assets/components/Cards.jsx";
+import Compartilhe from "./assets/components/compartilhe.jsx";
 import Footer from "./assets/components/Footer.jsx";
  //import Selection from "./views/sectionSpecial/selection";
 
@@ -17,6 +18,7 @@ function App() {
         <Register />
         <Division />
         <Cards />
+        <Compartilhe />
         <Footer />
     </div>
   );
