@@ -37,6 +37,11 @@
   font: normal normal normal 12px/14px Helvetica Neue;
  
 }
+.formFied_error{
+  color: #e74848;
+  font: normal normal normal 12px/14px Helvetica Neue; 
+
+}
 .man {
   margin-right: 8px;
   width: 20px;
@@ -56,7 +61,7 @@ input[type=text], select {
   border-radius: 4px;
   box-sizing: border-box;
 }
-input[type=nunber], select {
+input[type=number], select {
   width: 100%;
   padding: 12px 20px;
   margin: 8px 0;

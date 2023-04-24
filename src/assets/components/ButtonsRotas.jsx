@@ -1,25 +1,33 @@
 import "./ButtonsRotas.css";
-import { NavLink } from 'react-router-dom';
-import Footer from "./Footer";
 
-function ButtonsRotas(props) {
+function ButtonsRotas() {
+ 
   return (
-    
+   
     <div>
-      <div className="buttonsBuscas">
+    <div className="buttonsBuscas">
+    <div>
+      <button className="buttons"><a href="#Linx">Conheça a Linx</a></button>
+      <button className="buttons"><a href="#algoritimo">Ajude o algoritimo</a></button>
+      </div>
       <div>
-      <NavLink to={'/'}>
-        <button className="buttons">Conheça a Linx</button>
-        </NavLink>
-      
-        <button  className="buttons">Ajude o algoritimo</button>
-        </div>
-        <div>
-          <button className="buttons"> Seus produtos</button>
-          <button className="buttons">Compartilhe</button>
-        </div>
+        <button  className="buttons"><a href="#produtos">Seus produtos</a></button>
+        <button className="buttons"><a href="#Compartilhe">Compartilhe</a></button>
       </div>
     </div>
+     
+    </div>
+   
   );
 }
 export default ButtonsRotas;
+
+
+// <nav>
+// <ul className="buttonsBuscas">
+//     <button className="buttons"><a href="#Linx">Conheça a Linx</a></button>
+//     <li className="buttons"><a href="#algoritimo">Ajude o algoritimo</a></li>
+//     <li className="buttons"><a href="#produtos">Seus produtos</a></li>
+//     <li className="buttons"><a href="#Compartilhe">Compartilhe</a></li>
+// </ul>
+// </nav>

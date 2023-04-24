@@ -8,14 +8,15 @@ import Division from "./assets/components/Division.jsx";
 import Cards from "./assets/components/Cards.jsx";
 import Compartilhe from "./assets/components/compartilhe.jsx";
 import Footer from "./assets/components/Footer.jsx";
- //import Selection from "./views/sectionSpecial/selection";
+//import InviteFriends from "./assets/components/formik.jsx";
+
 
 function App() {
   return (
     <div className="Container">
         <Header />
         <ButtonsRotas />
-        <Register />
+        <Register/>
         <Division />
         <Cards />
         <Compartilhe />
@@ -25,21 +26,3 @@ function App() {
 }
 
 export default App;
-
-
-
-
-
-
-// function App() {
-//   return (
-//     <div className="App">
-//       <Routes>
-//         <Route path="/" element={ <Home /> }/>
-//         <Route path="/selection" element={ <Selection/> }/>
-       
-//       </Routes>
-//     </div>
-//   );
-// }
-// export default App;

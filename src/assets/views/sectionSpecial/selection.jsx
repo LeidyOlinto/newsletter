@@ -1,9 +1,13 @@
 import "./selection.css";
+import Header from "../../components/Header";
+import Footer from "../../components/Footer";
 
 function Selection() {
+
   return (
     
     <div className="containerSelection">
+    <Header/>
      <div className="Selection"></div>
       <div className="textSelection">
         <span className="nameSelection">Olá, Fulano</span>
@@ -51,6 +55,7 @@ function Selection() {
       <div className="moreProductSelection">
       <button className="moreButtonCardsSelection">Tem muito mais aqui. Vem ver!!</button>
     </div>
+     <Footer/>
     </div>
   );
 }

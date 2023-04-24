@@ -5,7 +5,7 @@ import React from "react";
 function Compartilhe() {
   return (
     <div>
-      <div className="friendInfor">
+      <div className="friendInfor" id="Compartilhe">
         <div className="friendText">
           Quer que seus amigos também ganhem a lista persolazada deles? Preencha
           agora!

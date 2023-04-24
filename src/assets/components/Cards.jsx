@@ -1,29 +1,31 @@
 import { useEffect, useState } from "react";
 import "./Cards.css";
 
+
 function Cards() {
-  const [cards, setCards] = useState('');
+  //const [cards, setCards] = useState(['']);
 
   const option = { method: "GET" };
   useEffect(() => {
-  
+    
   fetch(
     "https://frontend-intern-challenge-api.iurykrieger.now.sh/products?page=1",
+  
     option, console.log(option,'olaaaaa')
   )
     .then((response) => response.json())
-    .then((response) => setCards(response))
+    .then((response) => console.log(response))
     .catch((err) => console.error(err));
   },[])
 
   return (
-    <section className="sectiontable">
+    <section id="produtos" className="sectiontable">
       <div className="cardsProduts">
         <ul className="section">
           <div>
             <img src="" className="imges" />
           </div>
-          <div className="informationCard">
+          <div  className="informationCard">
             <div className="nameProduct">Nome do produto</div>
             <p className="descrictionCard">
               a descrição do produto um poucom maior,com detalhes especificos e
