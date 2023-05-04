@@ -3,14 +3,13 @@ import { Formik } from "formik";
 
 import "./RegisterAlgorithm.css";
 
-
 function useFormik({ initialValues, validate }) {
   const [touched, setTouchedFied] = useState({});
   const [errors, setErrors] = useState({});
   const [values, setValues] = useState(initialValues);
 
   useEffect(() => {
-    console.log("Alguem mexeu nos valores", values);
+    //console.log("Alguem mexeu nos valores");
     validateValues(values);
   }, [values]);
 
@@ -46,36 +45,37 @@ function useFormik({ initialValues, validate }) {
 function Register() {
   const formik = useFormik({
     initialValues: {
-      userName: "Maria Augusta Reis",
-      userEmail: "MariaAugusta@gmail.com",
-      userCpf: "02524658724",
+      name: "",
+      email: "",
+      cpf: "",
     },
-   
+
     validate: function (values) {
       const errors = {};
-
-      if (!values.userName) {
-        errors.userName = "Invalid name ";
-      } else if (!values.userName.length > 20) {
-        errors.userName = "Nome invalid,user name valid";
-      }
-
-      if (!values.userEmail) {
-        errors.userEmail = "Invalid email ";
+      console.log();
+      // if (!values.name) {
+      //   errors.name = "Invalid name ";
+      // } else if (values.name.length > 30) {
+      //   errors.name = "Nome invalid,user name valid";
+      // }
+      if (!values.email) {
+        errors.email = "Invalid email ";
       } else if (
-        !/^[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,}$/i.test(values.userEmail)
+        !/^[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,}$/i.test(values.email)
       ) {
-        errors.userEmail = "Invalid email address";
+        errors.email = "Invalid email address";
       }
-
-      if (values.userCpf.length < 12) {
-        errors.userCpf = "please,insert a valid CPF";
+      if (values.cpf) {
+        errors.cpf = "Invalid cpf";
+      } else if (
+        !/^[1-9.][A-Z0-9.-]{2,}$/i.test(values.cpf)
+      ) {
+        errors.cpf = "Invalid cpf address";
       }
-
       return errors;
     },
   });
-
+ 
   return (
     <main className="textSearch">
       <div className="textAlgorithm" id="Linx">
@@ -109,52 +109,53 @@ function Register() {
               <input
                 type="text"
                 placeholder="Maria Algusta"
-                name="userName"
-                id="userName"
+                name="name"
+                id="name"
                 onBlur={formik.handleBlur}
                 onChange={formik.handleChange}
-                value={formik.values.userName}
+                value={formik.values.name }
               />
-              {formik.touched.userName && formik.errors.userName && (
-                <span className="formFied_error">{formik.errors.userName}</span>
+              {formik.touched.name && formik.errors.name && (
+                <span className="formFied_error">{formik.errors.name}</span>
               )}
             </div>
             <div>
               <label className="record" htmlFor="userEmail">
-                {" "}
-                E-mail:{" "}
+                
+                E-mail:
               </label>
               <input
                 type="text"
                 placeholder="email@example.com"
-                name="userEmail"
-                id="userEmail"
+                name="email"
+                id="email"
                 onBlur={formik.handleBlur}
                 onChange={formik.handleChange}
-                value={formik.values.userEmail}
+                value={formik.values.email }
               />
-              {formik.touched.userEmail && formik.errors.userEmail && (
-                <span className="formFied_error">
-                  {formik.errors.userEmail}
-                </span>
+              {formik.touched.email && formik.errors.email && (
+                <span className="formFied_error">{formik.errors.email}</span>
               )}
             </div>
             <div>
               <label className="record" htmlFor="userCpf">
-                {" "}
+                
                 CPF:
               </label>
               <input
-                type="number"
+                type="text"
                 placeholder="09989475874"
                 name="userCpf"
                 id="userCpf"
+                maxLength="14"
                 onBlur={formik.handleBlur}
                 onChange={formik.handleChange}
-                value={formik.values.userCpf}
+                value={formik.values.cpf }
+                //onKeyUp={mascaraCpf}
+                
               />
-              {formik.touched.userCpf && formik.errors.userCpf && (
-                <span className="formFied_error">{formik.errors.userCpf}</span>
+              {formik.touched.cpf && formik.errors.cpf && (
+                <span className="formFied_error">{formik.errors.cpf}</span>
               )}
             </div>
             <label className="record">Masculino</label>
@@ -172,4 +173,3 @@ function Register() {
   );
 }
 export default Register;
-
