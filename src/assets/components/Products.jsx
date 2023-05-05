@@ -35,9 +35,9 @@ function Products() {
               <p className="descrictionCard">
                 {product.description}
               </p>
-              <div className="valorProdcuct">De: R${product.oldPrice}</div>
-              <div className="valueReal">Por: R${product.price}</div>
-              <div>ou duas vezes de R${product.value}</div>
+              <div className="valorProdcuct">De: R$ {product.oldPrice}</div>
+              <div className="valueReal">Por: R$ {product.price}</div>
+              <div>ou duas vezes de R$ {product.count}</div>
               <button className="buttonCardPurchase">Comprar</button>
             </div>
           </ul>
