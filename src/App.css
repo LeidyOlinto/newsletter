@@ -1,6 +1,8 @@
 *{
   margin: 0;
   padding: 0;
+  -webkit-font-smothing:antialiased;
+  -moz-osx-font-smoothing:grayscale;
 
 }
 .Container{

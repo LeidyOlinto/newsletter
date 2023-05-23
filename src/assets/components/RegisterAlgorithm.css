@@ -1,4 +1,4 @@
-/* Text Algoritihm */
+/* Text Algoritihm
 
 .textSearch{
   display: flex;
@@ -79,6 +79,10 @@ input[type=number], select {
   border: none;
   border-radius: 4px;
   cursor: pointer;
+  opacity: 1;
+}
+.submit:hover{
+  opacity: 0.8;
 }
 @media (max-width: 1000px){}
 @media (max-width: 900px){
@@ -117,4 +121,4 @@ input[type=number], select {
     padding-right: 10px;
 
   }
-}
+} */

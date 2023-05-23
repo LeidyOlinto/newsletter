@@ -80,6 +80,10 @@ input[type=number], select {
   border: none;
   border-radius: 4px;
   cursor: pointer;
+  opacity: 0.8;
+}
+.submit:hover{
+  opacity: 1;
 }
 @media (max-width: 1000px){}
 @media (max-width: 900px){

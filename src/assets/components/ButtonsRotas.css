@@ -23,7 +23,11 @@ a {
   color: #888888;
   border: 1px solid #707070;
   border-radius: 4px;
+  opacity: 08;
+}
+.buttons:hover{
   opacity: 1;
+  background-color: #f5eeee;
 }
 @media (max-width: 1000px){}
 @media (max-width: 900px){

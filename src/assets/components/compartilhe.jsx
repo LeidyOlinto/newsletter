@@ -1,5 +1,4 @@
 import "./compartilhe.css";
-import "./Division.jsx"
 
 import React from "react";
 import Division from "./Division.jsx";
@@ -7,7 +6,7 @@ import Division from "./Division.jsx";
 function Compartilhe() {
   return (
     <div>
-       <Division/>
+       <Division />
       <div className="friendInfor" id="Compartilhe">
         <div className="friendText">
           Quer que seus amigos também ganhem a lista persolazada deles? Preencha

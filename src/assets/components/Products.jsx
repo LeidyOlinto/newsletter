@@ -1,8 +1,9 @@
 import { useEffect, useState } from "react";
 import "./Products.css";
 
-function Products() {
+function ProductsCards(props) {
   const [products, setProducts] = useState([]);
+
 
   useEffect(() => {
     console.log("deu certo");
@@ -12,7 +13,7 @@ function Products() {
   const fetchData = async () => {
     try {
       const response = await fetch(
-        "https://frontend-intern-challenge-api.iurykrieger.vercel.app/products?page=1"
+        'https://frontend-intern-challenge-api.iurykrieger.vercel.app/products?page=1'
       );
       const data = await response.json();
       setProducts(data.products);
@@ -22,7 +23,7 @@ function Products() {
   };
 
   return (
-    <div className="produtos-container ">
+    <div className="produtos-container " id="produtos">
       {products.map((product) => (
         <div key={product.id}>
           <section>
@@ -42,12 +43,10 @@ function Products() {
           </section>
         </div>
       ))}
-      <div className="moreProduct">
-        <button className="moreButtonCards">Ainda mais produtos aqui!</button>
-      </div>
-   
+    
     </div>
+    
   );
-
+ 
 }
-export default Products;
+export default ProductsCards;

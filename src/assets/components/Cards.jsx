@@ -1,145 +1,21 @@
-// import Products from "./Products";
-// import "./Cards.css";
+import { useState } from "react";
+import "./Cards.css";
+//import ProductsCards from "./Products";
 
-// function Cards() {
+function MaisCards(props) {
+  const [cards, setCards] = useState([]);
+  console.log(cards, "chama mais produtos");
 
-//   return (
-//     <section className="sectiontable">
-//       <div className="cardsProduts">
-    
-//         <ul className="section">
-//           <div>
-//             <img src="" className="imges" />
-//           </div>
-//           <div className="informationCard">
-//             <div className="nameProduct">Nome do produto</div>
-//             <p className="descrictionCard">
-//               a descrição do produto um poucom maior,com detalhes especificos e
-//               beneficios do produto
-//             </p>
-//             <div className="valorProdcuct">De: R$500,00</div>
-//             <div className="valueReal">Por: R$300,00</div>
-//             <div>ou duas vezes de R$150,00</div>
-//             <button className="buttonCardPurchase">Comprar</button>
-//           </div>
-//         </ul>
-   
-//         <ul className="section">
-//           <img src="" className="img" />
-//           <div className="informationCard">
-//             <div className="nameProduct">Nome do produto</div>
-//             <p className="descrictionCard">
-//               a descrição do produto um poucom maior,com detalhes especificos e
-//               beneficios do produto
-//             </p>
-//             <div className="valorProdcuct">De: R$500,00</div>
-//             <div className="valueReal">Por: R$300,00</div>
-//             <div>ou duas vezes de R$150,00</div>
-//             <button className="buttonCardPurchase">Comprar</button>
-//           </div>
-//         </ul>
-//         <ul className="section">
-//           <img src="" className="img" />
-//           <div className="informationCard">
-//             <div className="nameProduct">Nome do produto</div>
-//             <p className="descrictionCard">
-//               a descrição do produto um poucom maior,com detalhes especificos e
-//               beneficios do produto
-//             </p>
-//             <div className="valorProdcuct">De: R$500,00</div>
-//             <div className="valueReal">Por: R$300,00</div>
-//             <div>ou duas vezes de R$150,00</div>
-//             <button className="buttonCardPurchase">Comprar</button>
-//           </div>
-//         </ul>
-//         <ul className="section">
-//           <img src="" className="img" />
-//           <div className="informationCard">
-//             <div className="nameProduct">Nome do produto</div>
-//             <p className="descrictionCard">
-//               a descrição do produto um poucom maior,com detalhes especificos e
-//               beneficios do produto
-//             </p>
-//             <div className="valorProdcuct">De: R$500,00</div>
-//             <div className="valueReal">Por: R$300,00</div>
-//             <div>ou duas vezes de R$150,00</div>
-//             <button className="buttonCardPurchase">Comprar</button>
-//           </div>
-//         </ul>
-//       </div>
 
-//       <div>
-//         <div className="cardsProduts">
-//           <ul className="section">
-//             <img src="" className="img" />
-//             <div className="informationCard">
-//               <div className="nameProduct">Nome do produto</div>
-//               <p className="descrictionCard">
-//                 a descrição do produto um poucom maior,com detalhes especificos
-//                 e beneficios do produto
-//               </p>
-//               <div className="valorProdcuct">De: R$500,00</div>
-//               <div className="valueReal">Por: R$300,00</div>
-//               <div>ou duas vezes de R$150,00</div>
-//               <button className="buttonCardPurchase">Comprar</button>
-//             </div>
-//           </ul>
-//           <ul className="section">
-//             <img src="" className="img" />
-//             <div className="informationCard">
-//               <div className="nameProduct">Nome do produto</div>
-//               <p className="descrictionCard">
-//                 a descrição do produto um poucom maior,com detalhes especificos
-//                 e beneficios do produto
-//               </p>
-//               <div className="valorProdcuct">De: R$500,00</div>
-//               <div className="valueReal">Por: R$300,00</div>
-//               <div>ou duas vezes de R$150,00</div>
-//               <button className="buttonCardPurchase">Comprar</button>
-//             </div>
-//           </ul>
-//           <ul className="section">
-//             <img src="" className="img" />
-//             <div className="informationCard">
-//               <div className="nameProduct">Nome do produto</div>
-//               <p className="descrictionCard">
-//                 a descrição do produto um poucom maior,com detalhes especificos
-//                 e beneficios do produto
-//               </p>
-//               <div className="valorProdcuct">De: R$500,00</div>
-//               <div className="valueReal">Por: R$300,00</div>
-//               <div>ou duas vezes de R$150,00</div>
-//               <button className="buttonCardPurchase">Comprar</button>
-//             </div>
-//           </ul>
-//           <ul className="section">
-//             <img src="" className="img" />
-//             <div className="informationCard">
-//               <div className="nameProduct">Nome do produto</div>
-//               <p className="descrictionCard">
-//                 a descrição do produto um poucom maior,com detalhes especificos
-//                 e beneficios do produto
-//               </p>
-//               <div className="valorProdcuct">De: R$500,00</div>
-//               <div className="valueReal">Por: R$300,00</div>
-//               <div>ou duas vezes de R$150,00</div>
-//               <button className="buttonCardPurchase">Comprar</button>
-//             </div>
-//           </ul>
-//         </div>
-//       </div>
-//       <div className="moreProduct">
-//         <button className="moreButtonCards">Ainda mais produtos aqui!</button>
-//       </div>
+  return (
+    <div id="posts-container" className="moreProduct">
+         
+          <button className="moreButtonCards" onClick={props.Products}>
+            Ainda mais produtos aqui!
+          </button>
+      
+    </div>
+  );
+}
+export default MaisCards;
 
-//       <div>
-//         <span className="especialSelection">
-//           <p className="selectionD"></p>
-//           <p className="titleCards">Compartilhe a novidade</p>
-//           <p className="selectionL"></p>
-//         </span>
-//       </div>
-//     </section>
-//   );
-// }
-// export default Cards;
