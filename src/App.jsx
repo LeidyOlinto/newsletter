@@ -10,17 +10,20 @@ import Compartilhe from "./assets/components/compartilhe.jsx";
 import Footer from "./assets/components/Footer.jsx";
 import  MyForm from "./assets/components/formik.jsx";
 import  ProductsCards from "./assets/components/Products.jsx";
+import { useState } from "react";
 
 
 function App() {
+  const [products, setProducts] = useState([]);
+  const [page,setPage] = useState(1);
   return (
     <div className="Container">
         <Header />
         <ButtonsRotas />
         <MyForm/>
         <Division />
-        <ProductsCards />
-        <MaisCards/>
+        <ProductsCards products={products} setProducts={setProducts}/>
+        <MaisCards page={page} setPage={setPage} products={products} setProducts={setProducts}/>
         <Compartilhe />
         <Footer />
     </div>

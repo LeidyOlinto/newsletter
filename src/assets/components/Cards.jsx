@@ -1,16 +1,27 @@
 import { useState } from "react";
 import "./Cards.css";
-//import ProductsCards from "./Products";
 
-function MaisCards(props) {
-  const [cards, setCards] = useState([]);
-  console.log(cards, "chama mais produtos");
+
+function MaisCards (props) {
+ 
+  const loadMore = async () => {
+    props.setPage(props.page + 1)
+    try {
+      const response = await fetch(
+        'https://frontend-intern-challenge-api.iurykrieger.vercel.app/products?page='+ page
+      );
+      const data = await response.json();
+      props.setProducts([...props.products,...data.products]);
+    } catch (error) {
+      console.error("Erro ao buscar os produtos:", error);
+    }
+  };
 
 
   return (
     <div id="posts-container" className="moreProduct">
          
-          <button className="moreButtonCards" onClick={props.Products}>
+          <button className="moreButtonCards" onClick={loadMore()}>
             Ainda mais produtos aqui!
           </button>
       

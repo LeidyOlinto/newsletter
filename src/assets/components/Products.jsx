@@ -1,10 +1,8 @@
 import { useEffect, useState } from "react";
 import "./Products.css";
 
-function ProductsCards(props) {
-  const [products, setProducts] = useState([]);
-
-
+function ProductsCards({products, setProducts}) {
+ 
   useEffect(() => {
     console.log("deu certo");
     fetchData();
