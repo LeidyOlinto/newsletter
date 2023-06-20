@@ -3,7 +3,6 @@ import "./Styles.css";
 
 import Header from "./assets/components/Header.jsx";
 import ButtonsRotas from "./assets/components/ButtonsRotas.jsx";
-//import Register from "./assets/components/RegisterAlgorithm.jsx";
 import Division from "./assets/components/Division.jsx";
 import MaisCards from "./assets/components/Cards.jsx";
 import Compartilhe from "./assets/components/compartilhe.jsx";
@@ -15,7 +14,7 @@ import { useState } from "react";
 
 function App() {
   const [products, setProducts] = useState([]);
-  const [page,setPage] = useState(1);
+  const [page,setPage] = useState(2);
   return (
     <div className="Container">
         <Header />

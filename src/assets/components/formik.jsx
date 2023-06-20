@@ -1,27 +1,25 @@
 import "./formik.css";
 import React, { useState } from "react";
-import { Form, Button ,Col} from "react-bootstrap";
+import { Form, Button } from "react-bootstrap";
 import InputMask from "react-input-mask";
 
 const MyForm = () => {
   const [name, setName] = useState("");
   const [email, setEmail] = useState("");
   const [cpf, setCpf] = useState("");
-  const [gender, setGender] = useState('');
+  const [gender, setGender] = useState("");
 
   function handleSubmit(event) {
-    console.log(name, email, cpf, "aqui deu certo");
     event.preventDefault();
     // Aqui você pode enviar os dados do formulário para o servidor
-  }
-  //Limpar formulario
-
-  const handleClear = () => {
+    console.log(name, email, cpf);
+ //Limpar formulario
     setName("");
     setEmail("");
     setCpf("");
-    setGender('');
-  };
+    setGender("");
+  }
+
   return (
     <div className="textSearch">
       <div className="textAlgorithm" id="Linx">
@@ -46,6 +44,7 @@ const MyForm = () => {
             <Form.Label className="record">Nome</Form.Label>
             <Form.Control
               type="text"
+         
               placeholder="Digite o seu nome"
               value={name}
               onChange={(event) => setName(event.target.value)}
@@ -55,7 +54,7 @@ const MyForm = () => {
           <Form.Group controlId="formEmail">
             <Form.Label className="record">E-mail</Form.Label>
             <Form.Control
-              type="text"
+              type="email"
               placeholder="Digite o seu e-mail"
               value={email}
               onChange={(event) => setEmail(event.target.value)}
@@ -80,29 +79,31 @@ const MyForm = () => {
           </Form.Group>
           <label className="record">Masculino</label>
           <input
-           className="man" 
-           value="gender" 
-           name="gender"
-           id="gender-male"
-           checked={gender === 'male'}
-           onChange={() => setGender('male')}
-           type="radio">
-
-           </input>
+            className="man"
+            value="gender"
+            name="gender"
+            id="gender-male"
+            checked={gender === "male"}
+            onChange={() => setGender("male")}
+            type="radio"
+          ></input>
           <label className="record">Feminino</label>
-          <input 
-          className="feminine" 
-          value="femenino"
-           type="radio"
-           name="gender"
-           id="gender-female"
-           checked={gender === 'female'}
-           onChange={() => setGender('female')}
-           ></input>
-          <Button variant="primary" type="submit" className="submit"  onClick={handleClear}>
+          <input
+            className="feminine"
+            value="femenino"
+            type="radio"
+            name="gender"
+            id="gender-female"
+            checked={gender === "female"}
+            onChange={() => setGender("female")}
+          ></input>
+          <Button
+            variant="primary"
+            type="submit"
+            className="submit"
+          >
             Enviar
           </Button>
-  
         </Form>
       </div>
     </div>
