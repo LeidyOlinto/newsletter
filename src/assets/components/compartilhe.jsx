@@ -1,35 +1,67 @@
 import "./compartilhe.css";
+import React, { useState } from "react";
 
-import React from "react";
 import Division from "./Division.jsx";
 
 function Compartilhe() {
+  const [name, setName] = useState("");
+  const [email, setEmail] = useState("");
+
+  const handleSubmit = (event) => {
+    event.preventDefault();
+    // Lógica para enviar os dados (por exemplo, fazer uma solicitação HTTP)
+    console.log("Name:", name);
+    console.log("Email:", email);
+
+     // Limpar os campos do formulário
+     setName('');
+     setEmail('');
+  };
+
   return (
     <div>
-       <Division />
+      <Division />
       <div className="friendInfor" id="Compartilhe">
         <div className="friendText">
           Quer que seus amigos também ganhem a lista persolazada deles? Preencha
           agora!
         </div>
-        <div className="userInformation">
-          <div className="userName">
-            <label className="userInformationText">Nome do seu amigo:</label>
-            <input className="userInformationBox" type="text" id="" />
+        <form onSubmit={handleSubmit}>
+          <div className="userInformation">
+            <div className="userName">
+              <label className="userInformationText" htmlFor="name">
+                Nome do seu amigo:
+              </label>
+              <input
+                className="userInformationBox"
+                type="text"
+                id="name"
+                value={name}
+                onChange={(event) => setName(event.target.value)}
+              />
+            </div>
+            <div>
+              <label className="userInformationText" htmlFor="email">E-mail:</label>
+              <input
+                className="userInformationBox"
+                name="Digite seu E-mail"
+                type="email"
+                id="email"
+                value={email}
+                onChange={(event) => setEmail(event.target.value)}
+              />
+            </div>
           </div>
-          <div>
-            <label className="userInformationText">E-mail:</label>
-            <input
-              className="userInformationBox"
-              type="text"
-              name="Digite seu E-mail"
-              id=""
-            />
-          </div>
-        </div>
+     
         <div className="userButton">
-          <button className="userInformationButton">Enviar agora</button>
+          <button
+            className="userInformationButton"
+            type="submit" 
+          >
+            Enviar agora
+          </button>
         </div>
+        </form>
       </div>
     </div>
   );
