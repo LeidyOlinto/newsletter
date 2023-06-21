@@ -10,8 +10,9 @@
   background: linear-gradient(183deg, rgba(61, 56, 55, 0.698) 59%, rgba(244, 244, 248, 0.104)  60.2%);
 }
 .nameSelection{
-  text-align: center;
-  padding-left: 220px;
+  padding-left: 60px;
+ justify-content: center;
+
   font: normal normal normal 20px/24px Helvetica Neue;
   letter-spacing: 0px;
   color: #888888;
@@ -20,7 +21,7 @@
 .textInforSelection{
  text-align: center;
   display: block;
-  width: 20%px;
+  width: 20;
   margin-top: 20px;
   margin-bottom: 20px;
 
@@ -112,6 +113,12 @@ align-items: center;
   .mainSelection {
     flex-direction: column;
     justify-content: center;
+  }
+  .nameSelection{
+    padding-left: 10px,
+  }
+  .moreButtonCardsSelection{
+    width: 320px;
   }
 
 }

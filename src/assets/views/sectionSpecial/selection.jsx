@@ -29,7 +29,7 @@ function Selection() {
           </p>
           <div className="valorProdcuctSelection">De: R$500,00</div>
           <div className="valueRealSelection">Por: R$300,00</div>
-          <div>ou duas vezes de R$150,00</div>
+          
           <button className="buttonCardPurchaseSelection">Comprar</button>
         </div>
         </ul>
@@ -45,7 +45,6 @@ function Selection() {
             </p>
             <div className="valorProdcuctSelection">De: R$500,00</div>
             <div className="valueRealSelection">Por: R$300,00</div>
-            <div>ou duas vezes de R$150,00</div>
             <button className="buttonCardPurchaseSelection">Comprar</button>
           </div>
         </ul>
