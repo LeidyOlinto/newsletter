@@ -13,7 +13,7 @@ const MyForm = () => {
     event.preventDefault();
     // Aqui você pode enviar os dados do formulário para o servidor
     console.log(name, email, cpf);
- //Limpar formulario
+    //Limpar formulario
     setName("");
     setEmail("");
     setCpf("");
@@ -44,7 +44,6 @@ const MyForm = () => {
             <Form.Label className="record">Nome</Form.Label>
             <Form.Control
               type="text"
-         
               placeholder="Digite o seu nome"
               value={name}
               onChange={(event) => setName(event.target.value)}
@@ -97,11 +96,7 @@ const MyForm = () => {
             checked={gender === "female"}
             onChange={() => setGender("female")}
           ></input>
-          <Button
-            variant="primary"
-            type="submit"
-            className="submit"
-          >
+          <Button variant="primary" type="submit" className="submit">
             Enviar
           </Button>
         </Form>

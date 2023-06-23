@@ -1,12 +1,13 @@
 import "./Division.css";
 
 
-function Division (_props){
+function Division (props){
+  const {title}=props;
   return(
     <div className="especialSelectionCard">
         <div className="especialSelection">
           <p className="selectionD"></p>
-          <p className="titleCards">Sua seleção especial</p>
+          <p className="titleCards" title={title}>{title}</p>
           <p className="selectionL"></p>
         </div>
         

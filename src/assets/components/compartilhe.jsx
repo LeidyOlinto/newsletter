@@ -20,7 +20,8 @@ function Compartilhe() {
 
   return (
     <div>
-      <Division />
+      <Division title={"Compartilhe a novidade"}/>
+     
       <div className="friendInfor" id="Compartilhe">
         <div className="friendText">
           Quer que seus amigos também ganhem a lista persolazada deles? Preencha

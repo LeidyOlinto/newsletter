@@ -15,10 +15,11 @@ function MaisCards(props) {
       console.error("Erro ao buscar os produtos:", error);
     }
   };
-
+  const closeProducts = () => {
+    props.setProducts([]);
+  };
   window.onscroll = function () {
     scrollFunction();
-    
   };
 
   function scrollFunction() {
@@ -31,11 +32,6 @@ function MaisCards(props) {
       document.getElementById("toTop").style.display = "none";
     }
   }
-  function toTopFunction() {
-    const scrollToTop = document.documentElement || document.body;
-    scrollToTop.scrollIntoView({ behavior: "smooth" });
-   
-  }
 
   return (
     <div id="posts-container" className="moreProduct">
@@ -43,16 +39,16 @@ function MaisCards(props) {
         Ainda mais produtos aqui!
       </button>
       <button
-        onClick={toTopFunction}
+        onClick={closeProducts}
         id="toTop"
-        title="UP"
+        title="Fechar"
         alt="UP"
         className="to-top"
       >
-        ⬆
+        ✘
       </button>
+    
     </div>
   );
 }
 export default MaisCards;
-

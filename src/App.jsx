@@ -20,7 +20,7 @@ function App() {
         <Header />
         <ButtonsRotas />
         <MyForm/>
-        <Division />
+        <Division title="Sua seleção especial" />
         <ProductsCards products={products} setProducts={setProducts}/>
         <MaisCards page={page} setPage={setPage} products={products} setProducts={setProducts}/>
         <Compartilhe />
