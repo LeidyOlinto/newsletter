@@ -48,6 +48,11 @@
   justify-content: center;
   padding: 10px 0px 40px 0px;
 }
+a{
+  display: block;
+  text-align: center;
+  justify-content: center;
+}
 @media (max-width: 900px) {
   .userInformation {
     display: block;

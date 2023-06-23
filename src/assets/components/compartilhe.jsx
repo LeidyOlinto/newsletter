@@ -61,8 +61,10 @@ function Compartilhe() {
           >
             Enviar agora
           </button>
+          
         </div>
         </form>
+        <a className="proximaP" href="http://localhost:5173/selection">Próxima página</a>
       </div>
     </div>
   );

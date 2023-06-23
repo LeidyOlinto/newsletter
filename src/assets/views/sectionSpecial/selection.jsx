@@ -95,6 +95,7 @@ function Selection() {
           ✘
         </button>
       </div>
+      <a className="proximaP" href="http://localhost:5173">Voltar</a>
       <Footer />
     </div>
   );
