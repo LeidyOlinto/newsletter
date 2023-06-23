@@ -36,6 +36,7 @@ function Compartilhe() {
               <input
                 className="userInformationBox"
                 type="text"
+                placeholder="Digite o seu nome"
                 id="name"
                 value={name}
                 onChange={(event) => setName(event.target.value)}
@@ -48,6 +49,7 @@ function Compartilhe() {
               <input
                 className="userInformationBox"
                 name="Digite seu E-mail"
+                placeholder="Digite o seu e-mail"
                 type="email"
                 id="email"
                 value={email}

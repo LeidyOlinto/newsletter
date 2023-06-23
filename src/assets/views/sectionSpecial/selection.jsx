@@ -83,7 +83,7 @@ function Selection() {
           className="moreButtonCardsSelection"
           onClick={fetchMoreProducts}
         >
-          Aqui ainda mais produtos !!!
+        Tem muito mais aqui. Vem ver!
         </button>
 
         <button
