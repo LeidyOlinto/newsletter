@@ -70,7 +70,7 @@ img {
     align-items: center;
     justify-content: center;
     margin-top: 20px;
-  
+
     align-items: center;
     display: grid;
     grid-template-columns: repeat(1, 0.1fr);
@@ -103,7 +103,6 @@ img {
     margin-top: 4px;
   }
   /* EMVIE PARA SEU AMIGO */
- 
 }
 @media (max-width: 500px) {
   .buttonCardPurchase {
@@ -123,7 +122,6 @@ img {
     opacity: 1;
   }
   /* EMVIE PARA SEU AMIGO */
-  
 }
 @media (max-width: 400px) {
   .buttonCardPurchase {

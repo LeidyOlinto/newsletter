@@ -12,10 +12,10 @@ function ProductsCards({ products, setProducts }) {
       const response = await fetch(
         "https://frontend-intern-challenge-api.iurykrieger.vercel.app/products?page=1"
       );
-     
+
       const data = await response.json();
       setProducts(data.products);
-      console.log(data.products)
+      console.log(data.products);
     } catch (error) {
       console.error("Erro ao buscar os produtos:", error);
     }

@@ -1,6 +1,6 @@
 /* Text Algoritihm */
 
-.textSearch{
+.textSearch {
   display: flex;
   justify-content: center;
   padding-left: 80px;
@@ -11,20 +11,19 @@
   align-items: center;
   padding-top: 5rem;
   color: #888888;
-  font:18px/26px Helvetica Neue;
+  font: 18px/26px Helvetica Neue;
   opacity: 1;
 }
-.textTitle{
-  font:22px/25px Helvetica Neue;
+.textTitle {
+  font: 22px/25px Helvetica Neue;
 }
 .information {
   padding-top: 25px;
   font-size: 15px;
   height: 100fr;
   display: flex;
-  
 }
-.register{
+.register {
   flex-direction: column;
   justify-content: space-between;
   padding-top: 5rem;
@@ -32,27 +31,27 @@
   width: 40%;
   padding-left: 30px;
 }
-.record{
+.record {
   color: #707070;
   font: normal normal normal 12px/14px Helvetica Neue;
- 
 }
-.formFied_error{
+.formFied_error {
   color: #e74848;
-  font: normal normal normal 12px/14px Helvetica Neue; 
+  font: normal normal normal 12px/14px Helvetica Neue;
 }
 
 .man {
   margin-right: 8px;
   width: 20px;
 }
-.feminine{
+.feminine {
   margin-right: 8px;
   width: 20px;
 }
 
-
-input[type=text],[type=email], select {
+input[type="text"],
+[type="email"],
+select {
   width: 100%;
   padding: 12px 20px;
   margin: 8px 0;
@@ -61,7 +60,8 @@ input[type=text],[type=email], select {
   border-radius: 4px;
   box-sizing: border-box;
 }
-input[type=number], select {
+input[type="number"],
+select {
   width: 100%;
   padding: 12px 20px;
   margin: 8px 0;
@@ -71,7 +71,7 @@ input[type=number], select {
   box-sizing: border-box;
 }
 
-.submit{
+.submit {
   width: 100%;
   background-color: #707070;
   color: white;
@@ -82,18 +82,18 @@ input[type=number], select {
   cursor: pointer;
   opacity: 0.8;
 }
-.submit:hover{
+.submit:hover {
   opacity: 1;
 }
-@media (max-width: 1000px){}
-@media (max-width: 900px){
-  .textSearch{
+@media (max-width: 1000px) {
+}
+@media (max-width: 900px) {
+  .textSearch {
     display: flex;
     flex-direction: column;
     justify-content: center;
     padding-left: 40px;
     padding-right: 40px;
-
   }
   .textAlgorithm {
     width: 100%;
@@ -101,25 +101,23 @@ input[type=number], select {
   .information {
     width: 100%;
   }
-  .register{
+  .register {
     width: 100%;
     justify-content: center;
     padding-left: 0px;
   }
-
 }
-@media (max-width: 700px){}
-@media (max-width: 500px){
-  .textSearch{
+@media (max-width: 700px) {
+}
+@media (max-width: 500px) {
+  .textSearch {
     padding-left: 20px;
     padding-right: 20px;
-
   }
 }
-@media (max-width: 400px){
-  .textSearch{
+@media (max-width: 400px) {
+  .textSearch {
     padding-left: 10px;
     padding-right: 10px;
-
   }
 }

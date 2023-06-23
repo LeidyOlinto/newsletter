@@ -40,15 +40,15 @@
   border-radius: 4px;
   cursor: pointer;
 }
-.userInformationButton:hover{
+.userInformationButton:hover {
   opacity: 1;
 }
 .userButton {
   display: flex;
   justify-content: center;
-  padding: 10px 0px 40px 0px;
+  
 }
-a{
+a {
   display: block;
   text-align: center;
   justify-content: center;

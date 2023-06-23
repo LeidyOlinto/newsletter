@@ -13,15 +13,15 @@ function Compartilhe() {
     console.log("Name:", name);
     console.log("Email:", email);
 
-     // Limpar os campos do formulário
-     setName('');
-     setEmail('');
+    // Limpar os campos do formulário
+    setName("");
+    setEmail("");
   };
 
   return (
     <div>
-      <Division title={"Compartilhe a novidade"}/>
-     
+      <Division title={"Compartilhe a novidade"} />
+
       <div className="friendInfor" id="Compartilhe">
         <div className="friendText">
           Quer que seus amigos também ganhem a lista persolazada deles? Preencha
@@ -42,7 +42,9 @@ function Compartilhe() {
               />
             </div>
             <div>
-              <label className="userInformationText" htmlFor="email">E-mail:</label>
+              <label className="userInformationText" htmlFor="email">
+                E-mail:
+              </label>
               <input
                 className="userInformationBox"
                 name="Digite seu E-mail"
@@ -53,18 +55,16 @@ function Compartilhe() {
               />
             </div>
           </div>
-     
-        <div className="userButton">
-          <button
-            className="userInformationButton"
-            type="submit" 
-          >
-            Enviar agora
-          </button>
-          
-        </div>
+
+          <div className="userButton">
+            <button className="userInformationButton" type="submit">
+              Enviar agora
+            </button>
+          </div>
         </form>
-        <a className="proximaP" href="http://localhost:5173/selection">Próxima página</a>
+        <a className="proximaP" href="http://localhost:5173/selection">
+          Próxima página
+        </a>
       </div>
     </div>
   );

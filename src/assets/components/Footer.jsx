@@ -5,13 +5,13 @@ function Footer() {
       <div className="footerText">
         <p>Projeto desenvolvido com HTML,CSS e JAVASCRIPT.</p>
         <p>
-          Feito por{" "}
+          Feito por
           <a
             href="https://www.linkedin.com/in/leidy-olinto-356b9391/"
             target="_blank"
           >
             Leidy Olinto
-          </a>{" "}
+          </a>
         </p>
         <p>NewTab Academy</p>
         <p>2023</p>

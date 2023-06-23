@@ -1,57 +1,55 @@
 /* Sua seleção especiaL */
-.especialSelection{
+.especialSelection {
   text-align: center;
   align-items: center;
   display: flex;
   padding-top: 40px;
   padding-bottom: 30px;
 
- justify-content: center;
+  justify-content: center;
 }
-.titleCards{
+.titleCards {
   text-align: center;
   align-items: center;
   color: #888888;
-  font:20px/28px Helvetica Neue;
+  font: 20px/28px Helvetica Neue;
   opacity: 1;
-
   width: 200px;
-  
 }
-.selectionL{
+.selectionL {
   border-bottom: 1px solid #888888;
   width: 338px;
   display: grid;
   margin-right: 9px;
- 
 }
-.selectionD{
-  border-bottom: 1px solid  #888888;
+.selectionD {
+  border-bottom: 1px solid #888888;
   width: 360px;
   display: grid;
-  margin-left: 25px; 
-} 
-@media (max-width: 1000px){}
-@media (max-width: 900px){
-  .titleCards{
+  margin-left: 25px;
+}
+@media (max-width: 1000px) {
+}
+@media (max-width: 900px) {
+  .titleCards {
     width: 361px;
   }
 }
-@media (max-width: 700px){
-  .titleCards{
-    font:19px/28px Helvetica Neue;
+@media (max-width: 700px) {
+  .titleCards {
+    font: 19px/28px Helvetica Neue;
     width: 560px;
   }
 }
-@media (max-width: 500px){
-  .titleCards{
-    font:17px/28px Helvetica Neue;
+@media (max-width: 500px) {
+  .titleCards {
+    font: 17px/28px Helvetica Neue;
     width: 600px;
   }
 }
-@media (max-width: 400px){
-  .titleCards{
-    font:15px/28px Helvetica Neue;
+@media (max-width: 400px) {
+  .titleCards {
+    font: 15px/28px Helvetica Neue;
     width: 200px;
   }
 }

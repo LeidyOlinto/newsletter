@@ -106,25 +106,3 @@ const MyForm = () => {
 };
 
 export default MyForm;
-// const listCard = (id, item) => {
-//   return (
-//     <div id="products-container" key={id}>
-//       <ul className="section">
-//         <div>
-//           <img src={item.img} className="imges" />
-//         </div>
-//         <div className="informationCard">
-//           <div className="nameProduct">{item.name}Nome do produto</div>
-//           <p className="descrictionCard">{item.infor}
-//             a descrição do produto um poucom maior,com detalhes especificos e
-//             beneficios do produto
-//           </p>
-//           <div className="valorProdcuct">De: R$500,00</div>
-//           <div className="valueReal">{item.value}Por: R$300,00</div>
-//           <div>ou duas vezes de R$150,00</div>
-//           <button className="buttonCardPurchase">Comprar</button>
-//         </div>
-//       </ul>
-//     </div>
-//   );
-// };

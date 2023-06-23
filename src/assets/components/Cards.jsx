@@ -47,7 +47,6 @@ function MaisCards(props) {
       >
         ✘
       </button>
-    
     </div>
   );
 }
