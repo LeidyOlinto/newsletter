@@ -8,18 +8,85 @@ const MyForm = () => {
   const [email, setEmail] = useState("");
   const [cpf, setCpf] = useState("");
   const [gender, setGender] = useState("");
+  const [errors, setErrors] = useState({});
+  //const [cpfValue, setCpfValue] = useState('');
+
+  // const handleCpfChange = (event) => {
+  //   const value = event.target.value;
+  //   setCpfValue(value);
+
+  //   if (value.trim() !== '') {
+  //     if (!cpf.isValid(value)) {
+  //       setCpfError('CPF inválido');
+  //     } else {
+  //       setCpfError('');
+  //     }
+  //   } else {
+  //     setCpfError('');
+  //   }
+  // };
 
   function handleSubmit(event) {
     event.preventDefault();
     // Aqui você pode enviar os dados do formulário para o servidor
-    console.log(name, email, cpf);
-    //Limpar formulario
-    setName("");
-    setEmail("");
-    setCpf("");
-    setGender("");
-  }
 
+    let isValid = true;
+    const newErrors = {};
+
+    // Validar o campo nome
+    if (name.trim() === "") {
+      isValid = false;
+      newErrors.name = "Nome é obrigatório";
+    }
+    // Validar o campo email
+    if (email.trim() === "") {
+      isValid = false;
+      newErrors.email = "Email é obrigatório";
+    } else if (!/\S+@\S+\.\S+/.test(email)) {
+      isValid = false;
+      newErrors.email = "Email inválido";
+    }
+    // Validar o campo CPF
+    // if (cpf.trim() === "") {
+    //   isValid = false;
+    //   newErrors.cpf = "CPF é obrigatório";
+    // } else if (!cpf.isValid(cpf)) {
+    //   isValid = false;
+    //   newErrors.cpf = "CPF inválido";
+    // }
+
+    if (isValid) {
+      // Lógica para enviar os dados (por exemplo, fazer uma solicitação HTTP)
+      console.log("Name:", name);
+      console.log("Email:", email);
+      console.log("CPF:", cpf);
+
+      // Limpar os campos do formulário
+      setName("");
+      setEmail("");
+      setCpf("");
+      setGender("");
+      // Limpar os erros
+      setErrors({});
+    } else {
+      // Atualizar os erros de validação
+      setErrors(newErrors);
+    }
+  }
+  // const handleCpfChange = (event) => {
+  //   const value = event.target.value;
+  //   setCpfValue(value);
+
+  //   if (value.trim() !== '') {
+  //     if (!cpf.isValid(value)) {
+  //       setErrors('CPF inválido');
+  //     } else {
+  //       setErrors('');
+  //     }
+  //   } else {
+  //     setErrors('');
+  //   }
+  //};
   return (
     <div className="textSearch">
       <div className="textAlgorithm" id="Linx">
@@ -48,6 +115,9 @@ const MyForm = () => {
               value={name}
               onChange={(event) => setName(event.target.value)}
             />
+            {errors.name && (
+              <span className="formFied_error">{errors.name}</span>
+            )}
           </Form.Group>
 
           <Form.Group controlId="formEmail">
@@ -57,7 +127,10 @@ const MyForm = () => {
               placeholder="Digite o seu e-mail"
               value={email}
               onChange={(event) => setEmail(event.target.value)}
-            />
+            />{" "}
+            {errors.email && (
+              <span className="formFied_error">{errors.email}</span>
+            )}
           </Form.Group>
 
           <Form.Group controlId="formCpf">
@@ -65,6 +138,7 @@ const MyForm = () => {
             <InputMask
               mask="999.999.999-99"
               value={cpf}
+              //onChange={handleCpfChange}
               onChange={(event) => setCpf(event.target.value)}
             >
               {(inputProps) => (

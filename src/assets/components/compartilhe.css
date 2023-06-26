@@ -53,6 +53,10 @@ a {
   text-align: center;
   justify-content: center;
 }
+span .formFied_error {
+  color: #e74848;
+  font: normal normal normal 12px/14px Helvetica Neue;
+}
 @media (max-width: 900px) {
   .userInformation {
     display: block;

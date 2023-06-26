@@ -6,16 +6,43 @@ import Division from "./Division.jsx";
 function Compartilhe() {
   const [name, setName] = useState("");
   const [email, setEmail] = useState("");
+  const [errors, setErrors] = useState({});
 
   const handleSubmit = (event) => {
     event.preventDefault();
-    // Lógica para enviar os dados (por exemplo, fazer uma solicitação HTTP)
-    console.log("Name:", name);
-    console.log("Email:", email);
 
-    // Limpar os campos do formulário
-    setName("");
-    setEmail("");
+    let isValid = true;
+    const newErrors = {};
+
+    // Validar o campo nome
+    if (name.trim() === "") {
+      isValid = false;
+      newErrors.name = "Nome é obrigatório";
+    }
+    // Validar o campo email
+    if (email.trim() === "") {
+      isValid = false;
+      newErrors.email = "Email é obrigatório";
+    } else if (!/\S+@\S+\.\S+/.test(email)) {
+      isValid = false;
+      newErrors.email = "Email inválido";
+    }
+
+    if (isValid) {
+      // Lógica para enviar os dados (por exemplo, fazer uma solicitação HTTP)
+      console.log("Name:", name);
+      console.log("Email:", email);
+
+      // Limpar os campos do formulário
+      setName("");
+      setEmail("");
+
+      // Limpar os erros
+      setErrors({});
+    } else {
+      // Atualizar os erros de validação
+      setErrors(newErrors);
+    }
   };
 
   return (
@@ -24,8 +51,8 @@ function Compartilhe() {
 
       <div className="friendInfor" id="Compartilhe">
         <div className="friendText">
-          Quer que seus amigos também ganhem a lista persolazada deles? Preencha
-          agora!
+          Quer que seus amigos também ganhem a lista personalizada deles?
+          Preencha agora!
         </div>
         <form onSubmit={handleSubmit}>
           <div className="userInformation">
@@ -41,6 +68,9 @@ function Compartilhe() {
                 value={name}
                 onChange={(event) => setName(event.target.value)}
               />
+              {errors.name && (
+                <span className="formFied_error">{errors.name}</span>
+              )}
             </div>
             <div>
               <label className="userInformationText" htmlFor="email">
@@ -54,7 +84,10 @@ function Compartilhe() {
                 id="email"
                 value={email}
                 onChange={(event) => setEmail(event.target.value)}
-              />
+              />{" "}
+              {errors.email && (
+                <span className="formFied_error">{errors.email}</span>
+              )}
             </div>
           </div>
 
