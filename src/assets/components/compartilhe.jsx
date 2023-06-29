@@ -97,7 +97,7 @@ function Compartilhe() {
             </button>
           </div>
         </form>
-        <a className="proximaP" href="/selection">
+        <a className="proximaP" href="/selection" target="_blank">
           Próxima página
         </a>
       </div>
