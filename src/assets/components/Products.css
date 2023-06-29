@@ -70,7 +70,6 @@ img {
     align-items: center;
     justify-content: center;
     margin-top: 20px;
-
     align-items: center;
     display: grid;
     grid-template-columns: repeat(1, 0.1fr);

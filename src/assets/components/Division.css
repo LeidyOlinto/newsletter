@@ -5,7 +5,6 @@
   display: flex;
   padding-top: 75px;
   padding-bottom: 30px;
-
   justify-content: center;
 }
 .titleCards {
@@ -52,4 +51,5 @@
     font: 15px/28px Helvetica Neue;
     width: 200px;
   }
+
 }
