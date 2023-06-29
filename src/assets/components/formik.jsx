@@ -9,22 +9,7 @@ const MyForm = () => {
   const [cpf, setCpf] = useState("");
   const [gender, setGender] = useState("");
   const [errors, setErrors] = useState({});
-  //const [cpfValue, setCpfValue] = useState('');
-
-  // const handleCpfChange = (event) => {
-  //   const value = event.target.value;
-  //   setCpfValue(value);
-
-  //   if (value.trim() !== '') {
-  //     if (!cpf.isValid(value)) {
-  //       setCpfError('CPF inválido');
-  //     } else {
-  //       setCpfError('');
-  //     }
-  //   } else {
-  //     setCpfError('');
-  //   }
-  // };
+  const [successMessage, setSuccessMessage] = useState("");
 
   function handleSubmit(event) {
     event.preventDefault();
@@ -46,20 +31,15 @@ const MyForm = () => {
       isValid = false;
       newErrors.email = "Email inválido";
     }
-    // Validar o campo CPF
-    // if (cpf.trim() === "") {
-    //   isValid = false;
-    //   newErrors.cpf = "CPF é obrigatório";
-    // } else if (!cpf.isValid(cpf)) {
-    //   isValid = false;
-    //   newErrors.cpf = "CPF inválido";
-    // }
 
     if (isValid) {
       // Lógica para enviar os dados (por exemplo, fazer uma solicitação HTTP)
       console.log("Name:", name);
       console.log("Email:", email);
       console.log("CPF:", cpf);
+
+      // Exibir mensagem de sucesso
+      setSuccessMessage("Formulário enviado com sucesso!");
 
       // Limpar os campos do formulário
       setName("");
@@ -73,20 +53,7 @@ const MyForm = () => {
       setErrors(newErrors);
     }
   }
-  // const handleCpfChange = (event) => {
-  //   const value = event.target.value;
-  //   setCpfValue(value);
 
-  //   if (value.trim() !== '') {
-  //     if (!cpf.isValid(value)) {
-  //       setErrors('CPF inválido');
-  //     } else {
-  //       setErrors('');
-  //     }
-  //   } else {
-  //     setErrors('');
-  //   }
-  //};
   return (
     <div className="textSearch">
       <div className="textAlgorithm" id="Linx">
@@ -174,6 +141,12 @@ const MyForm = () => {
             Enviar
           </Button>
         </Form>
+        <div className="successM">
+          {" "}
+          {successMessage && (
+            <div className="successMessage">{successMessage}</div>
+          )}
+        </div>
       </div>
     </div>
   );

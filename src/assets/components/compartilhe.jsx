@@ -7,6 +7,7 @@ function Compartilhe() {
   const [name, setName] = useState("");
   const [email, setEmail] = useState("");
   const [errors, setErrors] = useState({});
+  const [successMessage, setSuccessMessage] = useState("");
 
   const handleSubmit = (event) => {
     event.preventDefault();
@@ -33,12 +34,16 @@ function Compartilhe() {
       console.log("Name:", name);
       console.log("Email:", email);
 
+      // Exibir mensagem de sucesso
+      setSuccessMessage("Formulário enviado com sucesso!");
+
       // Limpar os campos do formulário
       setName("");
       setEmail("");
-
+    
       // Limpar os erros
       setErrors({});
+     
     } else {
       // Atualizar os erros de validação
       setErrors(newErrors);
@@ -54,6 +59,7 @@ function Compartilhe() {
           Quer que seus amigos também ganhem a lista personalizada deles?
           Preencha agora!
         </div>
+
         <form onSubmit={handleSubmit}>
           <div className="userInformation">
             <div className="userName">
@@ -97,6 +103,13 @@ function Compartilhe() {
             </button>
           </div>
         </form>
+        <div className="successM">
+          {" "}
+          {successMessage && (
+            <div className="successMessage">{successMessage}</div>
+          )}
+        </div>
+
         <a className="proximaP" href="/selection" target="_blank">
           Próxima página
         </a>
@@ -106,3 +119,4 @@ function Compartilhe() {
 }
 
 export default Compartilhe;
+
