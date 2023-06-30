@@ -110,7 +110,7 @@ function Compartilhe() {
           )}
         </div>
 
-        <a className="proximaP" href="/selection" target="_blank">
+        <a className="proximaP" href="/selection">
           Próxima página
         </a>
       </div>
