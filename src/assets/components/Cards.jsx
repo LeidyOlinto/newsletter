@@ -1,7 +1,10 @@
 import "./Cards.css";
+import React, {  useState } from "react";
 
 function MaisCards(props) {
+  const [isLoading, setIsLoading] = useState(false);
   const loadMore = async () => {
+    console.log(isLoading)
     try {
       const response = await fetch(
         "https://frontend-intern-challenge-api.iurykrieger.vercel.app/products?page=" +
@@ -14,6 +17,7 @@ function MaisCards(props) {
     } catch (error) {
       console.error("Erro ao buscar os produtos:", error);
     }
+    setIsLoading(false);
   };
   const closeProducts = () => {
     props.setProducts([]);
@@ -35,8 +39,17 @@ function MaisCards(props) {
 
   return (
     <div id="posts-container" className="moreProduct">
-      <button className="moreButtonCards" onClick={loadMore}>
-        Ainda mais produtos aqui!
+      <button
+       className="moreButtonCards" 
+       onClick={loadMore}
+       disabled={isLoading} // Desabilita o botão durante o carregamento
+
+       >  {isLoading ? (
+        <div className="custom-loader"></div>
+      ) : (
+        "Ainda mais produtos aqui!"
+      )}
+        
       </button>
       <button
         onClick={closeProducts}
